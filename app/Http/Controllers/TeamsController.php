@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Teams;
 use Illuminate\Http\Request;
 
 class TeamsController extends Controller
@@ -23,7 +23,7 @@ class TeamsController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -84,5 +84,9 @@ class TeamsController extends Controller
 
     public function test(){
         echo "Testing 1 2 1 2";
+        $teams = Teams::all();
+        foreach ($teams as $team){
+            echo $team['name'];
+        }
     }
 }
