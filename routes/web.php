@@ -12,5 +12,23 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::get('/results_and_fixtures', function () {
+    return view('results_and_fixtures');
+});
+
+Route::get('/mvp_race', function () {
+    return view('mvp_race');
+});
+
+Route::get('/teams', function () {
+    return view('teams');
+});
+
+Route::get('/standings', function () {
+    return view('standings');
+});
+
+Route::get('/test','TeamsController@test');
